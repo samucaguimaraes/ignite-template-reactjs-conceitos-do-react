@@ -21,13 +21,13 @@ export function TaskList() {
 
     /** Montagem de objeto a ser add a list to do */
     const newTask = {
-      id: uuidv4(),
+      id: Math.random() * 1000,
       title: newTaskTitle,
       isComplete: false
     }
 
     /** Adicionado a task, sobrepondo o valor anterior dinamicamente */
-    setTasks( oldStat =>  [...oldStat, newTask]);
+    setTasks([...tasks, newTask]);
     /** Zerando o input */
     setNewTaskTitle('');
   }
